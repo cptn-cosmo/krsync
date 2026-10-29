@@ -1,0 +1,16 @@
+[Desktop Entry]
+Type=Application
+Name=KRsync
+GenericName=Folder Synchronization
+Comment=Keep folders in sync with rsync
+Exec=krsync %F
+Icon=org.kde.krsync
+Terminal=false
+Categories=Qt;KDE;Utility;Archiving;FileTools;
+Keywords=rsync;sync;backup;mirror;grsync;copy;
+StartupNotify=true
+StartupWMClass=krsync
+SingleMainWindow=true
+X-DBUS-StartupType=Unique
+X-DBUS-ServiceName=org.kde.krsync
+X-KDE-StartupNotify=true

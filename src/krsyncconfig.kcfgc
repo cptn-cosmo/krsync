@@ -1,0 +1,8 @@
+File=krsyncconfig.kcfg
+ClassName=KRsyncConfig
+Singleton=true
+Mutators=true
+DefaultValueGetters=true
+GenerateProperties=true
+ParentInConstructor=false
+Notifiers=true

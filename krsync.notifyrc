@@ -1,0 +1,15 @@
+[Global]
+IconName=org.kde.krsync
+Name=KRsync
+Comment=Folder synchronization
+
+[Event/finished]
+Name=Synchronization finished
+Comment=A session finished synchronizing successfully
+Action=Popup
+
+[Event/failed]
+Name=Synchronization failed
+Comment=A session could not be synchronized
+Action=Popup
+Urgency=High

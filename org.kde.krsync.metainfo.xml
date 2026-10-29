@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: CC0-1.0 -->
+<component type="desktop-application">
+  <id>org.kde.krsync</id>
+  <launchable type="desktop-id">org.kde.krsync.desktop</launchable>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  <name>KRsync</name>
+  <summary>Keep folders in sync with rsync</summary>
+  <description>
+    <p>KRsync is a friendly front end for rsync, built for Plasma. Save each pair of folders as a session and synchronize it with one click, locally or over SSH.</p>
+    <ul>
+      <li>Sessions with every common rsync option, explained in plain language</li>
+      <li>Simulate a run first to see exactly what would change</li>
+      <li>Live progress, speed and time remaining, also shown in the task manager</li>
+      <li>Searchable log with separate views for changes and errors</li>
+      <li>Imports and exports Grsync session files</li>
+    </ul>
+  </description>
+  <categories>
+    <category>Utility</category>
+  </categories>
+  <provides>
+    <binary>krsync</binary>
+  </provides>
+  <content_rating type="oars-1.1"/>
+  <releases>
+    <release version="0.1.0" date="2026-10-29"/>
+  </releases>
+</component>

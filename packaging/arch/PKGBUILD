@@ -1,0 +1,42 @@
+# Maintainer: CPTN Cosmo <cosmo@geeks.gay>
+pkgname=krsync
+pkgver=0.1.0
+pkgrel=1
+pkgdesc='Qt 6 / Kirigami front end for rsync, in the spirit of Grsync'
+arch=('x86_64' 'aarch64')
+url='https://git.geeks.gay/cosmo/krsync'
+license=('GPL-3.0-or-later')
+depends=(
+  'gcc-libs'
+  'glibc'
+  'hicolor-icon-theme'
+  'kconfig'
+  'kcoreaddons'
+  'kcrash'
+  'kdbusaddons'
+  'ki18n'
+  'kiconthemes'
+  'kirigami'
+  'kirigami-addons'
+  'knotifications'
+  'qqc2-desktop-style'
+  'qt6-base'
+  'qt6-declarative'
+  'rsync'
+)
+makedepends=('cmake' 'extra-cmake-modules' 'ninja')
+optdepends=('polkit: run syncs as administrator via pkexec')
+source=("$pkgname-$pkgver.tar.gz::$url/releases/download/v$pkgver/$pkgname-$pkgver.tar.gz")
+sha256sums=('3a07ca956d8a5b88f84604db3aec3c932b9da18e75d7211afb71361c568945e0')
+
+build() {
+  cmake -B build -S "$pkgname-$pkgver" -G Ninja \
+    -DCMAKE_INSTALL_PREFIX=/usr \
+    -DCMAKE_BUILD_TYPE=None \
+    -DBUILD_TESTING=OFF
+  cmake --build build
+}
+
+package() {
+  DESTDIR="$pkgdir" cmake --install build
+}

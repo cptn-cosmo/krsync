@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: GPL-3.0-or-later -->
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+                          http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+    <kcfgfile name="krsyncrc"/>
+    <group name="General">
+        <entry name="RsyncPath" type="String">
+            <label>Path to the rsync executable</label>
+            <default>rsync</default>
+        </entry>
+        <entry name="NotifyWhenDone" type="Bool">
+            <label>Show a notification when a sync finishes in the background</label>
+            <default>true</default>
+        </entry>
+        <entry name="ConfirmDelete" type="Bool">
+            <label>Ask for confirmation before running a sync that deletes files</label>
+            <default>true</default>
+        </entry>
+        <entry name="AccurateProgress" type="Bool">
+            <label>Scan the whole source before transferring for accurate progress</label>
+            <default>false</default>
+        </entry>
+        <entry name="InhibitSleep" type="Bool">
+            <label>Prevent the system from sleeping while syncing</label>
+            <default>true</default>
+        </entry>
+        <entry name="ShowCommandPreview" type="Bool">
+            <label>Show the generated rsync command on the session page</label>
+            <default>true</default>
+        </entry>
+        <entry name="LastSession" type="String">
+            <label>Identifier of the last selected session</label>
+            <default></default>
+        </entry>
+    </group>
+</kcfg>
