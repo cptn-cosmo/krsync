@@ -2,6 +2,8 @@
 
 A Qt 6 / Kirigami front end for rsync, in the spirit of Grsync but built for Plasma: Wayland native, FormCard-style settings, live progress in the task manager, and a searchable log.
 
+![KRsync showing a saved session with its source, destination and preserve options](screenshots/main.png)
+
 ## Features
 
 - **Sessions**: save each source → destination pair with its own options. You can rename, duplicate, reorder, import and export them.
