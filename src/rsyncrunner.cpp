@@ -584,8 +584,9 @@ static double unitFactor(QStringView unit)
 bool RsyncRunner::parseProgress(const QString &line)
 {
     // "  1,234,567  45%   12.34MB/s    0:00:12 (xfr#5, to-chk=10/100)"
+    // rsync 3.4+ appends a unit to the byte count: "1,234,567B".
     static const QRegularExpression re(
-        uR"(^\s*([\d,.]+)([KMGTP]?)\s+(\d{1,3})%\s+([\d,.]+)([kKMGTP]?)i?B/s\s+(\d+):(\d\d):(\d\d)(?:\s+\(xfr#(\d+),\s*(?:ir|to)-chk=(\d+)/(\d+)\))?\s*$)"_s);
+        uR"(^\s*([\d,.]+)([KMGTP]?)i?B?\s+(\d{1,3})%\s+([\d,.]+)([kKMGTP]?)i?B/s\s+(\d+):(\d\d):(\d\d)(?:\s+\(xfr#(\d+),\s*(?:ir|to)-chk=(\d+)/(\d+)\))?\s*$)"_s);
     const auto m = re.match(line);
     if (!m.hasMatch())
         return false;

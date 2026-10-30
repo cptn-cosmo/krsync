@@ -25,6 +25,11 @@
   </provides>
   <content_rating type="oars-1.1"/>
   <releases>
+    <release version="0.1.1" date="2026-10-30">
+      <description>
+        <p>Fixes the progress dashboard not updating during a transfer with rsync 3.4 and newer.</p>
+      </description>
+    </release>
     <release version="0.1.0" date="2026-10-29"/>
   </releases>
 </component>
