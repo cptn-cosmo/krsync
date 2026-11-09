@@ -4,7 +4,7 @@ pkgver=0.1.1
 pkgrel=1
 pkgdesc='Qt 6 / Kirigami front end for rsync, in the spirit of Grsync'
 arch=('x86_64' 'aarch64')
-url='https://git.geeks.gay/cosmo/krsync'
+url='https://github.com/cptn-cosmo/krsync'
 license=('GPL-3.0-or-later')
 depends=(
   'gcc-libs'
@@ -26,8 +26,8 @@ depends=(
 )
 makedepends=('cmake' 'extra-cmake-modules' 'ninja')
 optdepends=('polkit: run syncs as administrator via pkexec')
-source=("$pkgname-$pkgver.tar.gz::$url/releases/download/v$pkgver/$pkgname-$pkgver.tar.gz")
-sha256sums=('4d185bd0531b733554a4257f4574abccdc699083021f0ac3f1ca6f4eaac5f51e')
+source=("$pkgname-$pkgver.tar.gz::$url/archive/refs/tags/v$pkgver.tar.gz")
+sha256sums=('860bf0049f99b746f0ddf55139298758e4873bfa48ed2a77dd5c7d30109ce9aa')
 
 build() {
   cmake -B build -S "$pkgname-$pkgver" -G Ninja \
